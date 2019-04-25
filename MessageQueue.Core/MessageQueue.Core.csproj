@@ -19,4 +19,17 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MessageQueue.CofigurationProvider.Core\MessageQueue.CofigurationProvider.Core.csproj" />
+    <ProjectReference Include="..\MessageQueue.Log.Core\MessageQueue.Log.Core.csproj" />
+  </ItemGroup>
+
 </Project>
