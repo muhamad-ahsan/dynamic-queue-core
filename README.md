@@ -14,4 +14,4 @@ As in `.Net Core` we do not have the classic `***.config` file for the configura
 If you want to run the code in `Visual Studio` or any other `.Net IDE`, just download the source code, restore the nuget packages, update the configuration and you are good to go.
 
 # Nuget
-Coming soon....
+***development in-progresss...***
