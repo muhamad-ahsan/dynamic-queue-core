@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\_Output\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Update="Resources\ErrorMessages.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -14,13 +18,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Resources\ErrorMessages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>

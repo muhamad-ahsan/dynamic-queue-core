@@ -39,7 +39,7 @@ namespace MessageQueue.Core.Abstract.Inbound
         /// NOTE: This method will check for the message regardless of queue listening status (start or stop).
         /// </summary>
         /// <returns>True if there is message; otherwise false.</returns>
-        bool HasMessage();
+        Task<bool> HasMessage();
         #endregion
     }
 }

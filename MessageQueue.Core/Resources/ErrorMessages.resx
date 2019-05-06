@@ -219,6 +219,9 @@
   <data name="MessageReturnedFromQueue" xml:space="preserve">
     <value>The message has been returned from the queue.</value>
   </data>
+  <data name="MisconfiguredImplementationParameter" xml:space="preserve">
+    <value>Misconfigured implementation parameter. It should be fully qualified class name including assembly name (e.g. Namesapce.ClassName, AssemblyName).</value>
+  </data>
   <data name="MissingNamespaceAddressInConfiguration" xml:space="preserve">
     <value>The namespace address is required in configuration for the requested operation.</value>
   </data>

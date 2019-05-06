@@ -22,7 +22,7 @@ namespace MessageQueue.Core.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ErrorMessages {
+    public class ErrorMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace MessageQueue.Core.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MessageQueue.Core.Resources.ErrorMessages", typeof(ErrorMessages).Assembly);
@@ -51,7 +51,7 @@ namespace MessageQueue.Core.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Acknowledgment is not configured for the queue..
         /// </summary>
-        internal static string AcknowledgmentIsNotConfiguredForQueue {
+        public static string AcknowledgmentIsNotConfiguredForQueue {
             get {
                 return ResourceManager.GetString("AcknowledgmentIsNotConfiguredForQueue", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Exchange does not exist..
         /// </summary>
-        internal static string ExchangeDoesNotExist {
+        public static string ExchangeDoesNotExist {
             get {
                 return ResourceManager.GetString("ExchangeDoesNotExist", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to abandon message acknowledgment..
         /// </summary>
-        internal static string FailedToAbandonMessageAcknowledgment {
+        public static string FailedToAbandonMessageAcknowledgment {
             get {
                 return ResourceManager.GetString("FailedToAbandonMessageAcknowledgment", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to acknowledge message..
         /// </summary>
-        internal static string FailedToAcknowledgeMessage {
+        public static string FailedToAcknowledgeMessage {
             get {
                 return ResourceManager.GetString("FailedToAcknowledgeMessage", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to check exchange existence..
         /// </summary>
-        internal static string FailedToCheckExchangeExistence {
+        public static string FailedToCheckExchangeExistence {
             get {
                 return ResourceManager.GetString("FailedToCheckExchangeExistence", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to check queue existence..
         /// </summary>
-        internal static string FailedToCheckQueueExistence {
+        public static string FailedToCheckQueueExistence {
             get {
                 return ResourceManager.GetString("FailedToCheckQueueExistence", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to check if queue has message..
         /// </summary>
-        internal static string FailedToCheckQueueHasMessage {
+        public static string FailedToCheckQueueHasMessage {
             get {
                 return ResourceManager.GetString("FailedToCheckQueueHasMessage", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to create exchange..
         /// </summary>
-        internal static string FailedToCreateExchange {
+        public static string FailedToCreateExchange {
             get {
                 return ResourceManager.GetString("FailedToCreateExchange", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to create queue..
         /// </summary>
-        internal static string FailedToCreateMessageQueue {
+        public static string FailedToCreateMessageQueue {
             get {
                 return ResourceManager.GetString("FailedToCreateMessageQueue", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Error occurred while creating ZeroMq socket..
         /// </summary>
-        internal static string FailedToCreateZeroMqSocket {
+        public static string FailedToCreateZeroMqSocket {
             get {
                 return ResourceManager.GetString("FailedToCreateZeroMqSocket", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to deserialize Json bytes..
         /// </summary>
-        internal static string FailedToDeserializeJsonBytes {
+        public static string FailedToDeserializeJsonBytes {
             get {
                 return ResourceManager.GetString("FailedToDeserializeJsonBytes", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to deserialize Json string..
         /// </summary>
-        internal static string FailedToDeserializeJsonString {
+        public static string FailedToDeserializeJsonString {
             get {
                 return ResourceManager.GetString("FailedToDeserializeJsonString", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to extract constants through reflection..
         /// </summary>
-        internal static string FailedToExtractConstantFields {
+        public static string FailedToExtractConstantFields {
             get {
                 return ResourceManager.GetString("FailedToExtractConstantFields", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to initialize message queue..
         /// </summary>
-        internal static string FailedToInitializeMessageQueue {
+        public static string FailedToInitializeMessageQueue {
             get {
                 return ResourceManager.GetString("FailedToInitializeMessageQueue", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to instantiate InboundFaF..
         /// </summary>
-        internal static string FailedToInstantiateInboundFaFMq {
+        public static string FailedToInstantiateInboundFaFMq {
             get {
                 return ResourceManager.GetString("FailedToInstantiateInboundFaFMq", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to instantiate InboundRaR..
         /// </summary>
-        internal static string FailedToInstantiateInboundRaRMq {
+        public static string FailedToInstantiateInboundRaRMq {
             get {
                 return ResourceManager.GetString("FailedToInstantiateInboundRaRMq", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to instantiate OutboundFaF..
         /// </summary>
-        internal static string FailedToInstantiateOutboundFaF {
+        public static string FailedToInstantiateOutboundFaF {
             get {
                 return ResourceManager.GetString("FailedToInstantiateOutboundFaF", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to instantiate OutboundRaR..
         /// </summary>
-        internal static string FailedToInstantiateOutboundRaRMq {
+        public static string FailedToInstantiateOutboundRaRMq {
             get {
                 return ResourceManager.GetString("FailedToInstantiateOutboundRaRMq", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Error occurred in message receiver handler..
         /// </summary>
-        internal static string FailedToReceiveMessage {
+        public static string FailedToReceiveMessage {
             get {
                 return ResourceManager.GetString("FailedToReceiveMessage", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Error occurred in request message receiver handler..
         /// </summary>
-        internal static string FailedToReceiveRequestMessage {
+        public static string FailedToReceiveRequestMessage {
             get {
                 return ResourceManager.GetString("FailedToReceiveRequestMessage", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Error occurred in response message receiver handler..
         /// </summary>
-        internal static string FailedToReceiveResponseMessage {
+        public static string FailedToReceiveResponseMessage {
             get {
                 return ResourceManager.GetString("FailedToReceiveResponseMessage", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to send message..
         /// </summary>
-        internal static string FailedToSendMessage {
+        public static string FailedToSendMessage {
             get {
                 return ResourceManager.GetString("FailedToSendMessage", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to send response message..
         /// </summary>
-        internal static string FailedToSendResponseMessage {
+        public static string FailedToSendResponseMessage {
             get {
                 return ResourceManager.GetString("FailedToSendResponseMessage", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to serialize object into Json bytes..
         /// </summary>
-        internal static string FailedToSerializeObjectIntoJsonBytes {
+        public static string FailedToSerializeObjectIntoJsonBytes {
             get {
                 return ResourceManager.GetString("FailedToSerializeObjectIntoJsonBytes", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to serialize object into Json string..
         /// </summary>
-        internal static string FailedToSerializeObjectIntoJsonString {
+        public static string FailedToSerializeObjectIntoJsonString {
             get {
                 return ResourceManager.GetString("FailedToSerializeObjectIntoJsonString", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to start receiving messages..
         /// </summary>
-        internal static string FailedToStartReceivingMessage {
+        public static string FailedToStartReceivingMessage {
             get {
                 return ResourceManager.GetString("FailedToStartReceivingMessage", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to start receiving requests..
         /// </summary>
-        internal static string FailedToStartReceivingRequest {
+        public static string FailedToStartReceivingRequest {
             get {
                 return ResourceManager.GetString("FailedToStartReceivingRequest", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to stop receiving messages..
         /// </summary>
-        internal static string FailedToStopReceivingMessage {
+        public static string FailedToStopReceivingMessage {
             get {
                 return ResourceManager.GetString("FailedToStopReceivingMessage", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to stop receiving requests..
         /// </summary>
-        internal static string FailedToStopReceivingRequest {
+        public static string FailedToStopReceivingRequest {
             get {
                 return ResourceManager.GetString("FailedToStopReceivingRequest", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Failed to parse configuration due to unknown error..
         /// </summary>
-        internal static string GeneralConfigurationParsingError {
+        public static string GeneralConfigurationParsingError {
             get {
                 return ResourceManager.GetString("GeneralConfigurationParsingError", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Invalid configuration parameter value (parameter: {0})..
         /// </summary>
-        internal static string InvalidValueForConfigurationParameter {
+        public static string InvalidValueForConfigurationParameter {
             get {
                 return ResourceManager.GetString("InvalidValueForConfigurationParameter", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Invalid ZeroMq socket type..
         /// </summary>
-        internal static string InvalidZeroMqSocketType {
+        public static string InvalidZeroMqSocketType {
             get {
                 return ResourceManager.GetString("InvalidZeroMqSocketType", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Message queue has not been initialized..
         /// </summary>
-        internal static string MessageQueueIsNotInitialized {
+        public static string MessageQueueIsNotInitialized {
             get {
                 return ResourceManager.GetString("MessageQueueIsNotInitialized", resourceCulture);
             }
@@ -360,16 +360,25 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The message has been returned from the queue..
         /// </summary>
-        internal static string MessageReturnedFromQueue {
+        public static string MessageReturnedFromQueue {
             get {
                 return ResourceManager.GetString("MessageReturnedFromQueue", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Misconfigured implementation parameter. It should be fully qualified class name including assembly name (e.g. Namesapce.ClassName, AssemblyName)..
+        /// </summary>
+        public static string MisconfiguredImplementationParameter {
+            get {
+                return ResourceManager.GetString("MisconfiguredImplementationParameter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The namespace address is required in configuration for the requested operation..
         /// </summary>
-        internal static string MissingNamespaceAddressInConfiguration {
+        public static string MissingNamespaceAddressInConfiguration {
             get {
                 return ResourceManager.GetString("MissingNamespaceAddressInConfiguration", resourceCulture);
             }
@@ -378,7 +387,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Missing required configuration parameter (parameter: {0})..
         /// </summary>
-        internal static string MissingRequiredConfigurationParameter {
+        public static string MissingRequiredConfigurationParameter {
             get {
                 return ResourceManager.GetString("MissingRequiredConfigurationParameter", resourceCulture);
             }
@@ -387,7 +396,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Not supported parameter(s) provided..
         /// </summary>
-        internal static string NotSupportedConfigurationParameters {
+        public static string NotSupportedConfigurationParameters {
             get {
                 return ResourceManager.GetString("NotSupportedConfigurationParameters", resourceCulture);
             }
@@ -396,7 +405,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The parameter (parameter: {0}) is not applicable in the current configuration..
         /// </summary>
-        internal static string ParameterNotApplicationInCurrentConfiguration {
+        public static string ParameterNotApplicationInCurrentConfiguration {
             get {
                 return ResourceManager.GetString("ParameterNotApplicationInCurrentConfiguration", resourceCulture);
             }
@@ -405,7 +414,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The parameter (parameter: {0}) is required in current configuration..
         /// </summary>
-        internal static string ParameterRequiredInCurrentConfiguration {
+        public static string ParameterRequiredInCurrentConfiguration {
             get {
                 return ResourceManager.GetString("ParameterRequiredInCurrentConfiguration", resourceCulture);
             }
@@ -414,7 +423,7 @@ namespace MessageQueue.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Queue does not exist..
         /// </summary>
-        internal static string QueueDoesNotExist {
+        public static string QueueDoesNotExist {
             get {
                 return ResourceManager.GetString("QueueDoesNotExist", resourceCulture);
             }

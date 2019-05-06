@@ -1,20 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>..\_Output\bin\Debug\</OutputPath>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="NLog" Version="4.6.2" />
-    <PackageReference Include="NLog.Config" Version="4.6.2" />
-    <PackageReference Include="NLog.Schema" Version="4.6.2" />
+    <PackageReference Include="Microsoft.Azure.ServiceBus" Version="3.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MessageQueue.Core\MessageQueue.Core.csproj" />
     <ProjectReference Include="..\MessageQueue.Log.Core\MessageQueue.Log.Core.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject>MessageQueue.Sender.Program</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\_Output\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Shared\appsettings.json" Link="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MessageQueue.CofigurationProvider.Json\MessageQueue.CofigurationProvider.Json.csproj" />
+    <ProjectReference Include="..\MessageQueue.Core\MessageQueue.Core.csproj" />
+    <ProjectReference Include="..\MessageQueue.Log.NLog\MessageQueue.Log.NLog.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -22,6 +22,7 @@
         ParameterRequiredInCurrentConfiguration,
         FailedToExtractConstantFields,
         GeneralConfigurationParsingError,
+        MisconfiguredImplementationParameter,
 
         // Serialization related
         FailedToSerializeObjectIntoJsonString,
