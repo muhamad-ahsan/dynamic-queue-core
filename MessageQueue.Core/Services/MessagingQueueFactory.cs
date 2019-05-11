@@ -99,7 +99,7 @@ namespace MessageQueue.Core.Services
 
                 #region Creating Implementation
                 // Getting type details.
-                var messageQueueTypeInfo = Type.GetType(configuration[CommonConfigurationKeys.Implementation], true, true);
+                var messageQueueTypeInfo = GetTypeInfo(configuration[CommonConfigurationKeys.Implementation]);
 
                 // Substituting generic parameters.
                 var typeParams = new[] { typeof(TMessage) };

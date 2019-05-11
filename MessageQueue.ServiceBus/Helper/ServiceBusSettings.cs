@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Azure.ServiceBus;
 
 namespace MessageQueue.ServiceBus.Helper
 {
@@ -21,6 +22,7 @@ namespace MessageQueue.ServiceBus.Helper
         public TimeSpan MessageTimeToLiveInMinutes { get; set; }
         public TimeSpan LockDurationInSeconds { get; set; }
         public ushort MaxConcurrentReceiveCallback { get; set; }
+        public ServiceBusConnectionStringBuilder ConnectionString { get; set; }
         #endregion
     }
 }

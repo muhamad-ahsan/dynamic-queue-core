@@ -1,5 +1,5 @@
 ﻿using System;
-using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using MessageQueue.Core.Helper;
 using MessageQueue.Core.Concrete;
@@ -12,7 +12,6 @@ using MessageQueue.Log.Core.Abstract;
 using Microsoft.Azure.ServiceBus.Core;
 using MessageQueue.ServiceBus.Abstract;
 using MessageQueue.Core.Abstract.Inbound;
-using System.Threading;
 
 namespace MessageQueue.ServiceBus.Concrete.Inbound
 {
@@ -41,7 +40,7 @@ namespace MessageQueue.ServiceBus.Concrete.Inbound
                 // Creating queue client for acknowledgment.
                 if (sbConfiguration.Acknowledgment)
                 {
-                    acknowledgmentQueueClient = new QueueClient(new ServiceBusConnectionStringBuilder(sbConfiguration.Address));
+                    acknowledgmentQueueClient = new QueueClient(sbConfiguration.ConnectionString);
                 }
                 #endregion
             }
@@ -69,7 +68,7 @@ namespace MessageQueue.ServiceBus.Concrete.Inbound
         {
             try
             {
-                var messageReceiverToPeek = new MessageReceiver(new ServiceBusConnectionStringBuilder(sbConfiguration.Address, sbConfiguration.QueueName, string.Empty), ReceiveMode.PeekLock);
+                var messageReceiverToPeek = new MessageReceiver(sbConfiguration.ConnectionString, ReceiveMode.PeekLock);
 
                 // Peeking
                 var result = await messageReceiverToPeek.PeekAsync() != null;
@@ -229,13 +228,17 @@ namespace MessageQueue.ServiceBus.Concrete.Inbound
 
         private static Task ExceptionReceivedHandler(ExceptionReceivedEventArgs exceptionReceivedEventArgs)
         {
-            // TODO: Exception management...
-            //Console.WriteLine($"Message handler encountered an exception {exceptionReceivedEventArgs.Exception}.");
-            //var context = exceptionReceivedEventArgs.ExceptionReceivedContext;
-            //Console.WriteLine("Exception context for troubleshooting:");
-            //Console.WriteLine($"- Endpoint: {context.Endpoint}");
-            //Console.WriteLine($"- Entity Path: {context.EntityPath}");
-            //Console.WriteLine($"- Executing Action: {context.Action}");
+            var context = exceptionReceivedEventArgs.ExceptionReceivedContext;
+
+            MessageQueueCommonItems.PrepareAndLogQueueException(
+                    errorCode: QueueErrorCode.FailedToReceiveMessage,
+                    message: ErrorMessages.FailedToReceiveMessage,
+                    innerException: exceptionReceivedEventArgs.Exception,
+                    queueContext: CommonItems.ServiceBusName,
+                    queueName: context.EntityPath,
+                    address: context.Endpoint,
+                    logger: null);
+
             return Task.CompletedTask;
         }
         #endregion

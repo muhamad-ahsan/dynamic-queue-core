@@ -8,6 +8,7 @@ using Microsoft.Azure.ServiceBus;
 using MessageQueue.Core.Resources;
 using MessageQueue.Log.Core.Abstract;
 using MessageQueue.ServiceBus.Helper;
+using Microsoft.Azure.ServiceBus.Core;
 using Microsoft.Azure.ServiceBus.Management;
 
 namespace MessageQueue.ServiceBus.Abstract
@@ -42,10 +43,13 @@ namespace MessageQueue.ServiceBus.Abstract
 
                 #region Parameters Collection
                 sbConfiguration = CommonItems.CollectSbConfiguration(ref configuration, isInbound, ref logger);
+
+                // Setting connection string.
+                sbConfiguration.ConnectionString = new ServiceBusConnectionStringBuilder(sbConfiguration.Address);
                 #endregion
 
                 #region Initializing Queue
-                queueClient = new QueueClient(new ServiceBusConnectionStringBuilder(sbConfiguration.Address), (sbConfiguration.Acknowledgment ? ReceiveMode.PeekLock : ReceiveMode.ReceiveAndDelete));
+                queueClient = new QueueClient(sbConfiguration.ConnectionString, (sbConfiguration.Acknowledgment ? ReceiveMode.PeekLock : ReceiveMode.ReceiveAndDelete));
 
                 if (!string.IsNullOrWhiteSpace(sbConfiguration.NamespaceAddress))
                 {
@@ -200,14 +204,21 @@ namespace MessageQueue.ServiceBus.Abstract
             {
                 try
                 {
-                    //queueClient.Peek();
+                    var messageReceiverToPeek = new MessageReceiver(sbConfiguration.ConnectionString, ReceiveMode.PeekLock);
 
-                    result = true;                }
-                catch (UnauthorizedAccessException)
-                {
-                    // If queue has only Send permission, then it will get this  exception if queue exists.
-                    // Which is fine to check queue existence.
+                    // Peeking (will throw exception if the queue does not exist).
+                    messageReceiverToPeek.PeekAsync().Wait();
+
+                    // Closing connection.
+                    messageReceiverToPeek.CloseAsync().Wait();
+
                     result = true;
+                }
+                catch (AggregateException ae) when (ae.InnerException is MessagingEntityNotFoundException || ae.InnerException is UnauthorizedAccessException)
+                {
+                    // If queue has only Send permission, then it will get 'UnauthorizedAccessException' exception if queue exists.
+                    // Which is fine to check queue existence.
+                    result = false;
                 }
                 catch (Exception ex) when (ex is MessagingEntityNotFoundException)
                 {
@@ -219,7 +230,7 @@ namespace MessageQueue.ServiceBus.Abstract
                 throw MessageQueueCommonItems.PrepareAndLogQueueException(
                     errorCode: QueueErrorCode.FailedToCheckQueueExistence,
                     message: ErrorMessages.FailedToCheckQueueExistence,
-                    innerException: ex,
+                    innerException: (ex is AggregateException) ? ((AggregateException)ex).Flatten() : ex,
                     queueContext: CommonItems.ServiceBusName,
                     queueName: sbConfiguration?.QueueName,
                     address: sbConfiguration?.Address,

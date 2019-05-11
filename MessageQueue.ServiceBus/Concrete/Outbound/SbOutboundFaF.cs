@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Threading.Tasks;
 using MessageQueue.Core.Helper;
 using MessageQueue.Core.Concrete;
@@ -54,7 +53,7 @@ namespace MessageQueue.ServiceBus.Concrete.Outbound
                 #region Sending Message
                 CheckConnection();
 
-                //queueClient.SendAsync(new BrokeredMessage(new MemoryStream(MessageQueueCommonItems.SerializeToJsonBytes(message))));
+                queueClient.SendAsync(new Message(MessageQueueCommonItems.SerializeToJsonBytes(message)));
                 #endregion
             }
             catch (QueueException queueException)
@@ -143,7 +142,7 @@ namespace MessageQueue.ServiceBus.Concrete.Outbound
                     // This is to avoid if multiple re-creation when threads are waiting for the lock to be released.
                     if (queueClient.IsClosedOrClosing)
                     {
-                        queueClient = new Microsoft.Azure.ServiceBus.QueueClient(new ServiceBusConnectionStringBuilder(sbConfiguration.Address));
+                        queueClient = new QueueClient(sbConfiguration.ConnectionString);
                     }
                 }
             }
