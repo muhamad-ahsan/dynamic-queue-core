@@ -73,7 +73,7 @@ namespace MessageQueue.ServiceBus.Concrete
                 var queueException = MessageQueueCommonItems.PrepareAndLogQueueException(
                     errorCode: QueueErrorCode.FailedToAcknowledgeMessage,
                     message: ErrorMessages.FailedToAcknowledgeMessage,
-                    innerException: ex,
+                    innerException: (ex is AggregateException) ? ((AggregateException)ex).Flatten() : ex,
                     queueContext: CommonItems.ServiceBusName,
                     queueName: queueName,
                     logger: logger);

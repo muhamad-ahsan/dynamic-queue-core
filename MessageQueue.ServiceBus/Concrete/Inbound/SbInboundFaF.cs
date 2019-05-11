@@ -23,7 +23,6 @@ namespace MessageQueue.ServiceBus.Concrete.Inbound
         #region Private Data Members
         private MessageReceiver messageReceiver;
         private volatile bool isReceivingMessages;
-        private QueueClient acknowledgmentQueueClient;
         #endregion
 
         #region Constructors
@@ -36,12 +35,6 @@ namespace MessageQueue.ServiceBus.Concrete.Inbound
 
                 // Setting other fields.
                 Address = sbConfiguration.Address;
-
-                // Creating queue client for acknowledgment.
-                if (sbConfiguration.Acknowledgment)
-                {
-                    acknowledgmentQueueClient = new QueueClient(sbConfiguration.ConnectionString);
-                }
                 #endregion
             }
             catch (Exception ex) when (!(ex is QueueException))
@@ -194,7 +187,7 @@ namespace MessageQueue.ServiceBus.Concrete.Inbound
                         lockToken = brokeredMessage.SystemProperties.LockToken;
                     }
 
-                    var messageReceiveOptions = new SbMessageReceiveOptions(lockToken, sbConfiguration.QueueName, sbConfiguration.Acknowledgment, ref acknowledgmentQueueClient, ref logger);
+                    var messageReceiveOptions = new SbMessageReceiveOptions(lockToken, sbConfiguration.QueueName, sbConfiguration.Acknowledgment, ref queueClient, ref logger);
 
                     // Calling handler (async is preferred over sync).
                     if (OnMessageReadyAsync != null)
