@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>DynamicQueue.ServiceBus.Core</id>
+    <id>DynamicQueue.CofigurationProvider.Json.Core</id>
     <version>1.0.2</version>
-	<title>DynamicQueue using Microsoft ServiceBus for .Net Core</title>
+	<title>Json configuration provider for DynamicQueue.Core</title>
     <authors>Muhammad Ahsan</authors>
-    <description>Microsoft ServiceBus based implementation of DynamicQueue framework for .Net Core.</description>
+    <description>Json configuration provider for DynamicQueue.Core.</description>
 	<license type="expression">GPL-3.0-only</license>
     <projectUrl>https://github.com/muhamad-ahsan/dynamic-queue-core</projectUrl>
     <iconUrl>https://github.com/muhamad-ahsan/dynamic-queue-core/blob/master/logo_symbol_nuget.png?raw=true</iconUrl>
@@ -13,18 +13,17 @@
     <copyright>Copyright 2019</copyright>
 	<repository type="git" url="https://github.com/muhamad-ahsan/dynamic-queue-core" />
     <tags>DynamicQueue ServiceBus Queue Dynamic Core DotNet C#</tags>
-    <releaseNotes>Fix for the missing DLLs.</releaseNotes>
+    <releaseNotes>Initial release.</releaseNotes>
 	
     <dependencies>
-      <dependency id="Newtonsoft.Json" version="12.0.2" />
-      <dependency id="Microsoft.Azure.ServiceBus" version="3.4.0" />
-      <dependency id="DynamicQueue.CofigurationProvider.Json.Core" version="1.0.2" />
+      <dependency id="Microsoft.Extensions.Configuration.Binder" version="2.2.4" />
+      <dependency id="Microsoft.Extensions.Configuration.Json" version="2.2.0" />
     </dependencies>
 	
   </metadata>
   
   <files>
-    <file src="..\_Output\bin\Release\netcoreapp2.1\MessageQueue.Core.dll" target="lib\netcoreapp2.1" />
+    <file src="..\_Output\bin\Release\netcoreapp2.1\MessageQueue.CofigurationProvider.Core.dll" target="lib\netcoreapp2.1" />
   </files>
  
 </package>
