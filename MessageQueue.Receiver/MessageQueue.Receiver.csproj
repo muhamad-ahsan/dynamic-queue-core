@@ -25,6 +25,7 @@
     <ProjectReference Include="..\MessageQueue.CofigurationProvider.Json\MessageQueue.CofigurationProvider.Json.csproj" />
     <ProjectReference Include="..\MessageQueue.Core\MessageQueue.Core.csproj" />
     <ProjectReference Include="..\MessageQueue.Log.NLog\MessageQueue.Log.NLog.csproj" />
+    <ProjectReference Include="..\MessageQueue.ServiceBus\MessageQueue.ServiceBus.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,4 +8,8 @@
     <OutputPath>..\_Output\bin\Debug\</OutputPath>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\_Output\bin\Release\</OutputPath>
+  </PropertyGroup>
+
 </Project>

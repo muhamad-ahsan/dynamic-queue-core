@@ -8,6 +8,10 @@
     <OutputPath>..\_Output\bin\Debug\</OutputPath>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\_Output\bin\Release\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Update="Resources\ErrorMessages.Designer.cs">
       <DesignTime>True</DesignTime>

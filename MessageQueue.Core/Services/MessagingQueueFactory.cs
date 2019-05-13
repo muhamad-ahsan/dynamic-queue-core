@@ -307,7 +307,7 @@ namespace MessageQueue.Core.Services
             #endregion
 
             #region Loading Assembly & Type
-            var assembly = Assembly.LoadFrom($"{assemblyName}.dll");
+            var assembly = Assembly.Load($"{assemblyName}");
 
             return assembly.GetType(implementationInfo[0].Trim(), true, true);
             #endregion
