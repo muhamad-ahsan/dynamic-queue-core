@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>DynamicQueue.ServiceBus.Core</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 	<title>DynamicQueue using Microsoft ServiceBus for .Net Core</title>
     <authors>Muhammad Ahsan</authors>
     <description>Microsoft ServiceBus based implementation of DynamicQueue framework for .Net Core.</description>
@@ -13,7 +13,7 @@
     <copyright>Copyright 2019</copyright>
 	<repository type="git" url="https://github.com/muhamad-ahsan/dynamic-queue-core" />
     <tags>DynamicQueue ServiceBus Queue Dynamic Core DotNet C#</tags>
-    <releaseNotes>Fix for the missing DLLs.</releaseNotes>
+    <releaseNotes>Minor - Log core library reference added.</releaseNotes>
 	
     <dependencies>
       <dependency id="Newtonsoft.Json" version="12.0.2" />
@@ -25,6 +25,7 @@
   
   <files>
     <file src="..\_Output\bin\Release\netcoreapp2.1\MessageQueue.Core.dll" target="lib\netcoreapp2.1" />
+    <file src="..\_Output\bin\Release\netcoreapp2.1\MessageQueue.Log.Core.dll" target="lib\netcoreapp2.1" />
   </files>
  
 </package>

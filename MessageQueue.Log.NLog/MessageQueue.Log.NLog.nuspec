@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>DynamicQueue.Log.NLog.Core</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 	<title>NLog based logging provider for DynamicQueue.Core</title>
     <authors>Muhammad Ahsan</authors>
     <description>NLog based logging provider for DynamicQueue.Core.</description>
@@ -13,12 +13,12 @@
     <copyright>Copyright 2019</copyright>
 	<repository type="git" url="https://github.com/muhamad-ahsan/dynamic-queue-core" />
     <tags>DynamicQueue ServiceBus Queue Dynamic Core DotNet C# Logger DynamicQueueLogger</tags>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>NLog package minor update from 4.6.2 to 4.6.3.</releaseNotes>
 	
     <dependencies>
-      <dependency id="NLog" version="4.6.2" />
-      <dependency id="NLog.Config" version="4.6.2" />
-      <dependency id="NLog.Schema" version="4.6.2" />
+      <dependency id="NLog" version="4.6.3" />
+      <dependency id="NLog.Config" version="4.6.3" />
+      <dependency id="NLog.Schema" version="4.6.3" />
     </dependencies>
 	
   </metadata>
